@@ -2,15 +2,38 @@ package main
 
 func main() {
 
-	var names [3]string
+	names := [3]string{
+		"Rachel",
+		"Shavonda",
+		"Jen",
+	}
 
-	var distances [5]int
+	distances := [5]int{
+		14,
+		6,
+		12,
+		87,
+		9,
+	}
 
-	var data [5]uint8
+	data := [5]uint8{
+		23,
+		84,
+		12,
+		1,
+		97,
+	}
 
-	var ratios [1]float64
+	ratios := [1]float64{
+		3.14,
+	}
 
-	var alives [4]bool
+	alives := [4]bool{
+		true,
+		false,
+		false,
+		false,
+	}
 
-	var zero [0]uint8
+	zero := [0]uint8{}
 }
