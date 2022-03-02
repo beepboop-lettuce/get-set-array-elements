@@ -120,30 +120,35 @@ func ordinaryLoopUint(a []uint8) {
 
 func rangeString(a []string) {
 	for index, element := range a {
+		fmt.Print("names")
 		fmt.Printf("[%v]: %s\n", index, element)
 	}
 }
 
 func rangeInt(a []int) {
 	for index, element := range a {
+		fmt.Print("distances")
 		fmt.Printf("[%v]: %d\n", index, element)
 	}
 }
 
 func rangeFloat(a []float64) {
 	for index, element := range a {
+		fmt.Print("ratios")
 		fmt.Printf("[%v]: %.2f\n", index, element)
 	}
 }
 
 func rangeBool(a []bool) {
 	for index, element := range a {
+		fmt.Print("alives")
 		fmt.Printf("[%v]: %t\n", index, element)
 	}
 }
 
 func rangeUint(a []uint8) {
 	for index, element := range a {
+		fmt.Print("data")
 		fmt.Printf("[%v]: %d\n", index, element)
 	}
 }
