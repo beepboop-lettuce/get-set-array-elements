@@ -55,40 +55,22 @@ FOR RANGES
 `)
 
 	print("names")
-
-	for index, element := range names {
-		fmt.Printf("names[%v]: %s\n", index, element)
-	}
+	rangeString(names[:])
 
 	print("distances")
-
-	for index, element := range distances {
-		fmt.Printf("distances[%v]: %d\n", index, element)
-	}
+	rangeInt(distances[:])
 
 	print("data")
-
-	for index, element := range data {
-		fmt.Printf("data[%v]: %d\n", index, element)
-	}
+	rangeUint(data[:])
 
 	print("ratios")
-
-	for index, element := range ratios {
-		fmt.Printf("ratios[%v]: %.2f\n", index, element)
-	}
+	rangeFloat(ratios[:])
 
 	print("alives")
-
-	for index, element := range alives {
-		fmt.Printf("alives[%v]: %t\n", index, element)
-	}
+	rangeBool(alives[:])
 
 	print("zero")
-
-	for index, element := range zero {
-		fmt.Printf("zero[%v]: %d\n", index, element)
-	}
+	rangeUint(zero[:])
 
 }
 
@@ -103,30 +85,65 @@ func print(s string) {
 
 func ordinaryLoopString(a []string) {
 	for i := 0; i < len(a); i++ {
-		fmt.Printf("ratios[%v]: %s\n", i, a[i])
+		fmt.Print("names")
+		fmt.Printf("[%v]: %s\n", i, a[i])
 	}
 }
 
 func ordinaryLoopInt(a []int) {
 	for i := 0; i < len(a); i++ {
-		fmt.Printf("ratios[%v]: %d\n", i, a[i])
+		fmt.Print("distances")
+		fmt.Printf("[%v]: %d\n", i, a[i])
 	}
 }
 
 func ordinaryLoopFloat(a []float64) {
 	for i := 0; i < len(a); i++ {
-		fmt.Printf("ratios[%v]: %.2f\n", i, a[i])
+		fmt.Print("ratios")
+		fmt.Printf("[%v]: %.2f\n", i, a[i])
 	}
 }
 
 func ordinaryLoopBool(a []bool) {
 	for i := 0; i < len(a); i++ {
-		fmt.Printf("ratios[%v]: %t\n", i, a[i])
+		fmt.Print("alives")
+		fmt.Printf("[%v]: %t\n", i, a[i])
 	}
 }
 
 func ordinaryLoopUint(a []uint8) {
 	for i := 0; i < len(a); i++ {
-		fmt.Printf("ratios[%v]: %d\n", i, a[i])
+		fmt.Print("data")
+		fmt.Printf("[%v]: %d\n", i, a[i])
+	}
+}
+
+func rangeString(a []string) {
+	for index, element := range a {
+		fmt.Printf("[%v]: %s\n", index, element)
+	}
+}
+
+func rangeInt(a []int) {
+	for index, element := range a {
+		fmt.Printf("[%v]: %d\n", index, element)
+	}
+}
+
+func rangeFloat(a []float64) {
+	for index, element := range a {
+		fmt.Printf("[%v]: %.2f\n", index, element)
+	}
+}
+
+func rangeBool(a []bool) {
+	for index, element := range a {
+		fmt.Printf("[%v]: %t\n", index, element)
+	}
+}
+
+func rangeUint(a []uint8) {
+	for index, element := range a {
+		fmt.Printf("[%v]: %d\n", index, element)
 	}
 }
