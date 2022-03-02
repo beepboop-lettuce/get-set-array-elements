@@ -14,9 +14,7 @@ func main() {
 
 	print("names")
 
-	for i := 0; i < len(names); i++ {
-		fmt.Printf("names[%v]: %s\n", i, names[i])
-	}
+	ordinaryLoopString(names[:])
 
 	distances := [5]int{
 		14,
@@ -28,9 +26,7 @@ func main() {
 
 	print("distances")
 
-	for i := 0; i < len(distances); i++ {
-		fmt.Printf("distances[%v]: %d\n", i, distances[i])
-	}
+	ordinaryLoopInt(distances[:])
 
 	data := [5]uint8{
 		23,
@@ -42,9 +38,7 @@ func main() {
 
 	print("data")
 
-	for i := 0; i < len(data); i++ {
-		fmt.Printf("data[%v]: %d\n", i, data[i])
-	}
+	ordinaryLoopUint(data[:])
 
 	ratios := [1]float64{
 		3.14,
@@ -52,9 +46,7 @@ func main() {
 
 	print("ratios")
 
-	for i := 0; i < len(ratios); i++ {
-		fmt.Printf("ratios[%v]: %.2f\n", i, ratios[i])
-	}
+	ordinaryLoopFloat(ratios[:])
 
 	alives := [4]bool{
 		true,
@@ -65,17 +57,13 @@ func main() {
 
 	print("alives")
 
-	for i := 0; i < len(alives); i++ {
-		fmt.Printf("alives[%v]: %t\n", i, alives[i])
-	}
+	ordinaryLoopBool(alives[:])
 
 	zero := [0]uint8{}
 
 	print("zero")
 
-	for i := 0; i < len(zero); i++ {
-		fmt.Printf("zero[%v]: %d\n", i, zero[i])
-	}
+	ordinaryLoopUint(zero[:])
 
 	fmt.Printf(`
 	
@@ -130,4 +118,34 @@ func print(s string) {
 =====================
 `, s)
 
+}
+
+func ordinaryLoopString(a []string) {
+	for i := 0; i < len(a); i++ {
+		fmt.Printf("ratios[%v]: %s\n", i, a[i])
+	}
+}
+
+func ordinaryLoopInt(a []int) {
+	for i := 0; i < len(a); i++ {
+		fmt.Printf("ratios[%v]: %d\n", i, a[i])
+	}
+}
+
+func ordinaryLoopFloat(a []float64) {
+	for i := 0; i < len(a); i++ {
+		fmt.Printf("ratios[%v]: %.2f\n", i, a[i])
+	}
+}
+
+func ordinaryLoopBool(a []bool) {
+	for i := 0; i < len(a); i++ {
+		fmt.Printf("ratios[%v]: %t\n", i, a[i])
+	}
+}
+
+func ordinaryLoopUint(a []uint8) {
+	for i := 0; i < len(a); i++ {
+		fmt.Printf("ratios[%v]: %d\n", i, a[i])
+	}
 }
