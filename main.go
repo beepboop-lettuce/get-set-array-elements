@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 
@@ -10,11 +12,7 @@ func main() {
 		"Jen",
 	}
 
-	fmt.Printf(`
-names
-
-=====================
-`)
+	print("names")
 
 	for i := 0; i < len(names); i++ {
 		fmt.Printf("names[%v]: %s\n", i, names[i])
@@ -28,11 +26,7 @@ names
 		9,
 	}
 
-	fmt.Printf(`
-distances
-
-=====================
-`)
+	print("distances")
 
 	for i := 0; i < len(distances); i++ {
 		fmt.Printf("distances[%v]: %d\n", i, distances[i])
@@ -46,11 +40,7 @@ distances
 		97,
 	}
 
-	fmt.Printf(`
-data
-
-=====================
-`)
+	print("data")
 
 	for i := 0; i < len(data); i++ {
 		fmt.Printf("data[%v]: %d\n", i, data[i])
@@ -60,11 +50,7 @@ data
 		3.14,
 	}
 
-	fmt.Printf(`
-ratios
-
-=====================
-`)
+	print("ratios")
 
 	for i := 0; i < len(ratios); i++ {
 		fmt.Printf("ratios[%v]: %.2f\n", i, ratios[i])
@@ -77,11 +63,7 @@ ratios
 		false,
 	}
 
-	fmt.Printf(`
-alives
-
-=====================
-`)
+	print("alives")
 
 	for i := 0; i < len(alives); i++ {
 		fmt.Printf("alives[%v]: %t\n", i, alives[i])
@@ -89,11 +71,7 @@ alives
 
 	zero := [0]uint8{}
 
-	fmt.Printf(`
-zero
-
-=====================
-`)
+	print("zero")
 
 	for i := 0; i < len(zero); i++ {
 		fmt.Printf("zero[%v]: %d\n", i, zero[i])
@@ -107,64 +85,49 @@ FOR RANGES
 
 `)
 
-	fmt.Printf(`
-names
-
-=====================
-`)
+	print("names")
 
 	for index, element := range names {
 		fmt.Printf("names[%v]: %s\n", index, element)
 	}
 
-	fmt.Printf(`
-distances
-
-=====================
-`)
+	print("distances")
 
 	for index, element := range distances {
 		fmt.Printf("distances[%v]: %d\n", index, element)
 	}
 
-	fmt.Printf(`
-data
-
-=====================
-`)
+	print("data")
 
 	for index, element := range data {
 		fmt.Printf("data[%v]: %d\n", index, element)
 	}
 
-	fmt.Printf(`
-ratios
-
-=====================
-`)
+	print("ratios")
 
 	for index, element := range ratios {
 		fmt.Printf("ratios[%v]: %.2f\n", index, element)
 	}
 
-	fmt.Printf(`
-alives
-
-=====================
-`)
+	print("alives")
 
 	for index, element := range alives {
 		fmt.Printf("alives[%v]: %t\n", index, element)
 	}
 
-	fmt.Printf(`
-zero
-
-=====================
-`)
+	print("zero")
 
 	for index, element := range zero {
 		fmt.Printf("zero[%v]: %d\n", index, element)
 	}
+
+}
+
+func print(s string) {
+	fmt.Printf(`
+%s
+
+=====================
+`, s)
 
 }
