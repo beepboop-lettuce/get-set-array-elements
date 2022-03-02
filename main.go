@@ -7,62 +7,43 @@ import (
 func main() {
 
 	names := [3]string{
-		"Rachel",
-		"Shavonda",
-		"Jen",
+		"Rachel", "Shavonda", "Jen",
 	}
-
-	print("names")
-
-	ordinaryLoopString(names[:])
 
 	distances := [5]int{
-		14,
-		6,
-		12,
-		87,
-		9,
+		14, 6, 12, 87, 9,
 	}
-
-	print("distances")
-
-	ordinaryLoopInt(distances[:])
 
 	data := [5]uint8{
-		23,
-		84,
-		12,
-		1,
-		97,
+		23, 84, 12, 1, 97,
 	}
-
-	print("data")
-
-	ordinaryLoopUint(data[:])
 
 	ratios := [1]float64{
 		3.14,
 	}
 
-	print("ratios")
-
-	ordinaryLoopFloat(ratios[:])
-
 	alives := [4]bool{
-		true,
-		false,
-		false,
-		false,
+		true, false, false, false,
 	}
-
-	print("alives")
-
-	ordinaryLoopBool(alives[:])
 
 	zero := [0]uint8{}
 
-	print("zero")
+	print("names")
+	ordinaryLoopString(names[:])
 
+	print("distances")
+	ordinaryLoopInt(distances[:])
+
+	print("data")
+	ordinaryLoopUint(data[:])
+
+	print("ratios")
+	ordinaryLoopFloat(ratios[:])
+
+	print("alives")
+	ordinaryLoopBool(alives[:])
+
+	print("zero")
 	ordinaryLoopUint(zero[:])
 
 	fmt.Printf(`
