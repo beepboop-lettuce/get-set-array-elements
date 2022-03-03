@@ -2,15 +2,16 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
 
-	names := [3]string{
+	names := [...]string{
 		"Rachel", "Shavonda", "Jen",
 	}
 
-	distances := [5]int{
+	distances := [...]int{
 		14, 6, 12, 87, 9,
 	}
 
@@ -26,7 +27,7 @@ func main() {
 		true, false, false, false,
 	}
 
-	zero := [0]uint8{}
+	var zero [0]byte
 
 	print("names")
 	ordinaryLoopString(names[:])
@@ -47,12 +48,12 @@ func main() {
 	ordinaryLoopUint(zero[:])
 
 	fmt.Printf(`
-	
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-FOR RANGES
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`)
+%s
+FOR RANGES
+%[1]s
+
+`, strings.Repeat("~", 30))
 
 	print("names")
 	rangeString(names[:])
